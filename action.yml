@@ -1,0 +1,18 @@
+name: 'Protolint'
+description: 'A tool to enforce Protocol Buffer style and conventions'
+author: 'Plex Systems'
+
+branding:
+  icon: 'code'
+  color: 'black'
+
+inputs:
+  command:
+    description: 'The command to run with protolint'
+    required: true
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+  - ${{ inputs.command }}
