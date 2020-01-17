@@ -1,18 +1,22 @@
-name: 'Protolint'
-description: 'A tool to enforce Protocol Buffer style and conventions'
-author: 'Plex Systems'
+name: "Protolint Action"
+description: "A tool to enforce Protocol Buffer style and conventions"
+author: "Plex Systems"
 
 branding:
-  icon: 'code'
-  color: 'black'
+  icon: "code"
+  color: "black"
 
 inputs:
-  command:
-    description: 'The command to run with protolint'
+  configDirectory:
+    description: "the path to where the .protolint.yaml configuration exists"
     required: true
 
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: "docker"
+  image: "Dockerfile"
   args:
-  - ${{ inputs.command }}
+    - protolint
+    - lint
+    - -config_dir_path
+    - ${{ inputs.configDirectory }}
+    - .

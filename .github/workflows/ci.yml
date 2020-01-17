@@ -1,0 +1,14 @@
+name: "build-test"
+on: [pull_request]
+
+jobs:
+  check-pr:
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout source
+      uses: actions/checkout@v1
+
+    - name: run action
+      uses: ./
+      with:
+        configDirectory: test 

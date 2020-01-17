@@ -1,0 +1,6 @@
+lint:
+    rules:
+      no_default: true
+  
+      add:
+        - SERVICE_NAMES_UPPER_CAMEL_CASE
