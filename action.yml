@@ -1,4 +1,4 @@
-name: "Protolint Action"
+name: "Protolint"
 description: "A tool to enforce Protocol Buffer style and conventions"
 author: "Plex Systems"
 
