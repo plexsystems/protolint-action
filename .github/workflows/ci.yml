@@ -11,4 +11,4 @@ jobs:
     - name: run action
       uses: ./
       with:
-        configDirectory: test 
+        configDirectory: test

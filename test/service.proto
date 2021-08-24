@@ -2,4 +2,4 @@ syntax = "proto3";
 
 package service;
 
-service MyService { }
+service MyService {}

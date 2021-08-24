@@ -8,7 +8,6 @@ A GitHub Action for using [protolint](https://github.com/yoheimuta/protolint) in
 
 - `configDirectory`: the path to where the `.protolint.yaml` configuration exists.
 
-
 ## Example
 
 ```yaml
@@ -19,11 +18,11 @@ jobs:
   pr-check:
     runs-on: ubuntu-latest
     steps:
-    - name: checkout source
-      uses: actions/checkout@v1
+      - name: checkout source
+        uses: actions/checkout@v1
 
-    - name: run protolint
-      uses: plexsystems/protolint-action@v0.2.0
-      with:
-        configDirectory: test 
+      - name: run protolint
+        uses: plexsystems/protolint-action@v0.4.0
+        with:
+          configDirectory: test
 ```
