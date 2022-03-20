@@ -10,6 +10,10 @@ inputs:
   configDirectory:
     description: "the path to where the .protolint.yaml configuration exists"
     required: true
+  srcDirectory:
+    description: "the path to where the .proto files are"
+    required: false
+    default: .
 
 runs:
   using: "docker"
@@ -19,4 +23,4 @@ runs:
     - lint
     - -config_dir_path
     - ${{ inputs.configDirectory }}
-    - .
+    - ${{ inputs.srcDirectory }}
