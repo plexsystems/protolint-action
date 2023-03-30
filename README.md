@@ -19,10 +19,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout source
-        uses: actions/checkout@v1
+        uses: actions/checkout@v3
 
       - name: run protolint
-        uses: plexsystems/protolint-action@v0.4.0
+        uses: plexsystems/protolint-action@v0.7.0
         with:
           configDirectory: test
 ```
